@@ -44,9 +44,9 @@ The project is organized into several key directories and files, each serving a 
 
 - **`Dockerfile`**: This script defines the Docker image for the joke microservice. It sets up a Python environment, installs dependencies from `requirements.txt`, and specifies the command to run the Flask application.
 
-- **`requirements.txt`**: This file lists the Python dependencies for the joke microservice, including Flask for web development and OpenAI for joke generation.
+- **`requirements.txt`**: This file lists the Python dependencies for the joke microservice, including Flask for web development and a joke_service API for joke generation.
 
-- **`app.py`**: This script is the main Flask application for the joke microservice. It defines a single route (`/joke`) that uses the OpenAI API to generate a joke and returns it as a JSON response. This microservice illustrates how to integrate third-party APIs and provides a scalable way to handle specific tasks.
+- **`app.py`**: This script is the main Flask application for the joke microservice. It defines a single route (`/joke`) that uses the joke_service API to generate a joke and returns it as a JSON response. This microservice illustrates how to integrate third-party APIs and provides a scalable way to handle specific tasks.
 
 ### Configuration and Deployment
 
@@ -60,11 +60,32 @@ The project is organized into several key directories and files, each serving a 
 
 - **`run.py`**: This script is the entry point for running the Flask application. It imports the app from the `app` package and runs it if the script is executed directly, allowing the application to start.
 
-## Setup Instructions
 
-### Prerequisites
+This is a very simple project that randomly generates a joke every time a user logs in after successfully creating an account. Overall, it showcases how different components, such as the joke_service container, interact with the web application to generate jokes every time.
 
-- Docker installed on your machine.
-- Docker Compose installed on your machine.
+### Screenshots
 
+- When a user accesses the web page
+  
+![Screenshot 2024-06-20 155924](https://github.com/pnsudhanva/Formula-1-score-prediction-using-analytics-and-machine-learning/assets/14261453/2789f4f6-77df-4422-81cc-204cc5bd7a87)
+
+- When a user is greeted with a random joke after successfully logging in
+
+![Screenshot 2024-06-20 155947](https://github.com/pnsudhanva/Formula-1-score-prediction-using-analytics-and-machine-learning/assets/14261453/7d15b3c7-3e74-496e-ad30-106ea66a631a)
+
+- When a user decides to create an account
+
+![Screenshot 2024-06-20 160020](https://github.com/pnsudhanva/Formula-1-score-prediction-using-analytics-and-machine-learning/assets/14261453/7b3c41b1-df01-4f6d-8787-dac11d0b405c)
+
+- Trying to access the DB service which is running inside a container. We can see that there notable fields such as the username, email, and passwords which are ancrypted and cannot be deciphered because of the encryption algorithms used in the code.
+
+![Screenshot 2024-06-20 160050](https://github.com/pnsudhanva/Formula-1-score-prediction-using-analytics-and-machine-learning/assets/14261453/735d5b9f-603b-4ad1-aaa3-2c4cccccffba)
+
+- The services running currently
+
+![Screenshot 2024-06-20 160106](https://github.com/pnsudhanva/Formula-1-score-prediction-using-analytics-and-machine-learning/assets/14261453/235ea385-f70f-4f8d-a5b9-7dd4f8f4d72c)
+
+- The container service running which can seen from the docker desktop app
+
+![Screenshot 2024-06-20 160122](https://github.com/pnsudhanva/Formula-1-score-prediction-using-analytics-and-machine-learning/assets/14261453/a8035183-08a5-49c8-921e-ebf05a90f87f)
 
