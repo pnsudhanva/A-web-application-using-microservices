@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<div class="welcome-container">
+    <div class="welcome-banner">
+        <h1>Welcome Back, <strong>{{ name }}</strong>!</h1>
+    </div>
+    <div class="content-card">
+        <p><strong>Your account has been created!</strong> You are now able to log in.</p>
+        <h2>Greetings, <strong>{{ name }}</strong>!</h2>
+        <h4><i>Your joke for today is....</i></h4>
+        <div class="joke-section">
+            <p>{{ joke }}</p>
+        </div>
+    </div>
+    <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+</div>
+{% endblock %}

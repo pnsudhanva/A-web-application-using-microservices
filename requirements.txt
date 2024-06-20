@@ -1,0 +1,9 @@
+Flask
+Flask-SQLAlchemy
+Flask-Bcrypt
+Flask-Login
+Flask-WTF
+pymysql
+python-dotenv
+email-validator
+requests==2.26.0
